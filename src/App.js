@@ -1,6 +1,6 @@
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import colors from "nice-color-palettes/100";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Background from "./sketches/Background";
 import profile from "./assets/img/profile.png";
 import Card from "./Card";
