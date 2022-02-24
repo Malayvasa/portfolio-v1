@@ -1,9 +1,8 @@
-import colors from "nice-color-palettes/200";
-
 function Background(p5) {
   let noiseScale = 2000;
   let agents = [];
   let rSeed;
+  let canvas;
   let cols = [
     "#f72585",
     "#b5179e",
@@ -61,9 +60,9 @@ function Background(p5) {
   }
 
   p5.setup = () => {
-    p5.createCanvas(p5.windowWidth, p5.windowHeight);
+    canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight);
     p5.randomSeed(rSeed);
-    cols = colors[p5.floor(p5.random(colors.length))];
+    // cols = colors[p5.floor(p5.random(colors.length))];
     //p5.background(0);
     for (let i = 0; i < 50; i++) {
       agents[i] = new Agent(
@@ -72,6 +71,20 @@ function Background(p5) {
         i % cols.length
       );
     }
+  };
+
+  p5.updateWithProps = (props) => {
+    if (props.cols) {
+      cols = props.cols;
+      p5.setup();
+    }
+  };
+
+  window.onresize = function () {
+    // assigns new values for width and height variables
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    canvas.size(w, h);
   };
 
   p5.draw = () => {
