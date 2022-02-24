@@ -1,8 +1,7 @@
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import Background from "./sketches/Background";
 import profile from "./assets/img/profile.png";
-import { InstagramLogoIcon } from "@radix-ui/react-icons";
-import Navbar from "./Navbar";
+
 import Card from "./Card";
 
 function App() {
@@ -19,6 +18,7 @@ function App() {
             <img
               className="w-24 h-24 rounded-full border-4"
               src={profile}
+              alt="Malay Vasa"
             ></img>
           </div>
           <div className="font-bold text-lg tracking-tight">Malay Vasa</div>
