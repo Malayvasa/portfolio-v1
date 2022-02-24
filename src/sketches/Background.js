@@ -75,6 +75,7 @@ function Background(p5) {
 
   p5.updateWithProps = (props) => {
     if (props.cols) {
+      console.log("Inside Sketch Change");
       cols = props.cols;
       p5.setup();
     }

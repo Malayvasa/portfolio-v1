@@ -1,16 +1,17 @@
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import colors from "nice-color-palettes/100";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Background from "./sketches/Background";
 import profile from "./assets/img/profile.png";
 import Card from "./Card";
 
 function App() {
-  const [paletteNum, setPaletteNum] = useState(0);
-  const [cols, setCols] = useState(colors[paletteNum]);
+  const [cols, setCols] = useState(colors[0]);
   function handlePaletteChange() {
-    setPaletteNum(Math.floor(Math.random() * colors.length));
-    setCols(colors[paletteNum]);
+    let newPaletteNum = Math.floor(Math.random() * colors.length);
+    let newCols = colors[newPaletteNum];
+    setCols(newCols);
+    console.log("handlePaletteChange");
   }
   return (
     <div className="w-screen min-h-screen flex items-center content-center flex-col">
@@ -106,7 +107,7 @@ function App() {
 
       <div
         onClick={handlePaletteChange}
-        className="transition ease-in-out fixed flex flex-row items-center gap-x-2 rounded-md bg-opacity-30 hover:bg-opacity-100 text-sm bottom-0 right-0 m-8 bg-white p-2"
+        className="transition ease-in-out flex flex-row items-center gap-x-2 rounded-md bg-opacity-30 hover:bg-opacity-100 text-sm absolute bottom-0 right-0 m-8 bg-white p-2"
       >
         <svg
           width="16"
@@ -122,11 +123,11 @@ function App() {
             clip-rule="evenodd"
           ></path>
         </svg>
-        <div className="hidden md:block">randomize</div>
+        <div className="hidden md:block text-md">randomize</div>
       </div>
 
-      <div className="fixed bottom-0 text-xs md:text-sm text-white pb-8 text-opacity-40 text-center leading-tight tracking-tight">
-        ✨ Refresh to see more magic <br /> Made with React, p5js & Tailwind
+      <div className="absolute bottom-0 text-md md:text-md text-white pb-8 text-opacity-40 text-center leading-tight tracking-tight">
+        ✨ Made with React, p5js & Tailwind
       </div>
     </div>
   );
