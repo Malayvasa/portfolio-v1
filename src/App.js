@@ -20,8 +20,8 @@ function App() {
       </div>
       {/* <Navbar /> */}
 
-      <div className="flex flex-row my-auto gap-x-12">
-        <div className="my-auto flex flex-col gap-y-4 w-80">
+      <div className="flex flex-row my-auto gap-x-12 w-80">
+        <div className="my-auto flex flex-col gap-y-4 w-full">
           <Card>
             <div className="flex flex-row items-center gap-x-4">
               <img
@@ -107,7 +107,7 @@ function App() {
 
       <div
         onClick={handlePaletteChange}
-        className="transition ease-in-out flex flex-row items-center gap-x-2 rounded-md bg-opacity-30 hover:bg-opacity-100 text-sm absolute bottom-0 right-0 m-8 bg-white p-2"
+        className="text-white text-opacity-40 flex-shrink-0  transition ease-in-out flex flex-row items-center gap-x-2 rounded-md bg-opacity-20 hover:bg-opacity-50 text-sm absolute bottom-0 right-0 m-8 bg-slate-800 p-2"
       >
         <svg
           width="16"
@@ -126,7 +126,7 @@ function App() {
         <div className="hidden md:block text-md">randomize</div>
       </div>
 
-      <div className="absolute bottom-0 text-md md:text-md text-white pb-8 text-opacity-40 text-center leading-tight tracking-tight">
+      <div className="bg-slate-900 bg-opacity-5 mb-8 bottom-0 text-sm md:text-md text-white p-2 rounded-md text-opacity-40 leading-tight tracking-tight">
         ✨ Made with React, p5js & Tailwind
       </div>
     </div>
