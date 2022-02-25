@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Questrial", "sans-serif"],
+      sans: ["Syne", "sans-serif"],
     },
   },
   plugins: [],
