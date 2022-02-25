@@ -48,7 +48,15 @@ function App() {
             <span className="text-opacity-100 text-white underline">
               <a href="https://kernel.community/en/">Kernel</a>
             </span>
+            <div className="mt-4">
+              This portfolio is still under construction, please visit my{" "}
+              <span className="text-white underline">
+                <a href="https://www.behance.net/malayvasa">Behance</a>
+              </span>{" "}
+              page to see samples of my work.
+            </div>
           </div>
+
           <div className="flex flex-row items-center gap-x-12">
             <img
               src={profile}
