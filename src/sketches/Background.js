@@ -22,7 +22,7 @@ function Background(p5) {
       this.y = y;
       this.z = p5.random(0.02, 0.08);
       this.size = p5.random(250, 500);
-      this.speed = p5.random(1, 1.5);
+      this.speed = p5.random(0.5, 1.5);
       this.col = p5.color(cols[index]);
       this.angle = 0;
       this.noiseStrength = (index + 1) * p5.random(10) + 20;

@@ -1,9 +1,9 @@
 function Footer({ handlePaletteChange }) {
   return (
     <>
-      <div className="flex items-center px-4 md:px-16 justify-between bg-slate-900 bg-opacity-10 backdrop-blur-xl backdrop-filter fixed bottom-0 w-full">
-        <div className=" w-80 bottom-0 text-sm  md:text-md text-white p-2 rounded-md text-opacity-40">
-          ✨ Made with ❤️ using React, p5js & Tailwind
+      <div className="flex items-center justify-between md:justify-center px-4 md:px-32 fixed bottom-0 w-full">
+        <div className=" w-max bottom-0 text-sm  md:text-md text-white p-2 rounded-md text-opacity-40">
+          Made with React, p5js & Tailwind
         </div>
 
         <div
