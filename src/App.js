@@ -34,7 +34,7 @@ function App() {
               </div>
               <div className="font-bold text-lg tracking-tight">Malay Vasa</div>
               <div className=" leading-tight tracking-tight">
-                I'm a ui/ux desiger with <br /> front-end superpowers
+                I'm a ui/ux designer with <br /> front-end superpowers
               </div>
             </Card>
             <Card>
