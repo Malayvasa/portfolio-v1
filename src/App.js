@@ -129,8 +129,6 @@ function App() {
           <div className="hidden md:block text-md">randomize</div>
         </div>
 
-        <div></div>
-
         <div className=" my-auto mt-8  w-80 mx-auto mb-8 bottom-0 text-sm text-center md:text-md text-white p-2 rounded-md text-opacity-40 leading-tight tracking-tight">
           ✨ Made with React, p5js & Tailwind CSS
         </div>
