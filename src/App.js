@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="h-screen">
       <div className="fixed top-0 left-0 h-screen w-screen bg-opacity-40  bg-slate-900  saturate-200 -z-10"></div>
-      <div className="fixed top-0 left-0 opacity-40 blur-xl sm:blur-none  saturate-200 -z-20">
+      <div className="fixed top-0 left-0 opacity-40 blur-xl sm:blur-md  saturate-200 -z-20">
         <ReactP5Wrapper sketch={Background} cols={cols} />
       </div>
 
