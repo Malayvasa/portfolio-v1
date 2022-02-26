@@ -17,19 +17,19 @@ function App() {
     console.log("handlePaletteChange");
   }
   return (
-    <div className="h-screen">
-      <div className="fixed top-0 left-0 h-screen w-screen bg-opacity-40  bg-slate-900  saturate-200 -z-10"></div>
-      <div className="fixed top-0 left-0 opacity-40 blur-xl sm:blur-md  saturate-200 -z-20">
+    <div className="h-screen mb-32">
+      {/* <div className="fixed top-0 left-0 h-screen w-screen bg-opacity-40  bg-slate-900  saturate-200 -z-10"></div> */}
+      <div className="fixed top-0 left-0 opacity-80 blur-3xl  saturate-200 -z-20">
         <ReactP5Wrapper sketch={Background} cols={cols} />
       </div>
 
       <div className="h-full  my-auto flex flex-col">
-        <div className=" md:h-5/6 flex flex-col md:flex-row pb-8 sm:pb-0 md:gap-x-8 w-full px-8 lg:px-16 xl:px-8 2xl:px-44 my-auto scroll-overflow">
+        <div className=" md:h-5/6 flex flex-col md:flex-row pb-32 sm:pb-32 md:gap-x-8 w-full px-8 lg:px-16 xl:px-16 2xl:px-44 my-auto scroll-overflow">
           <div className="">
             <Intro handlePaletteChange={handlePaletteChange} />
           </div>
 
-          <div className="w-full sm:w-[550px] xl:w-[750px] ml-auto mr-0">
+          <div className="w-full sm:w-[550px] xl:w-[750px] ml-auto mr-0 ">
             <div className="flex flex-col pt-16 md:pt-0 items-start">
               <div className="text-lg pb-4 text-white text-opacity-40">
                 UI/UX Projects

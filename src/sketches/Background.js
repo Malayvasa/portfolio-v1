@@ -21,7 +21,7 @@ function Background(p5) {
       this.x = x;
       this.y = y;
       this.z = p5.random(0.02, 0.08);
-      this.size = p5.random(25, 50);
+      this.size = p5.random(250, 500);
       this.speed = p5.random(0.5, 10);
       this.col = p5.color(cols[index]);
       this.angle = 0;
@@ -43,10 +43,10 @@ function Background(p5) {
       this.y += p5.cos(this.angle) * p5.cos(this.angle / 4) * this.speed;
 
       this.bounds();
-      this.z += 0.0005;
-      if (this.z > 0.6) {
-        p5.setup();
-      }
+      // this.z += 0.0005;
+      // if (this.z > 0.6) {
+      //   p5.setup();
+      // }
     }
 
     bounds() {
