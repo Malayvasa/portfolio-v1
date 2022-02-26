@@ -2,7 +2,7 @@ function Background(p5) {
   let noiseScale = 2000;
   let agents = [];
   let rSeed;
-  let canvas;
+  //let canvas;
   let cols = [
     "#f72585",
     "#b5179e",
@@ -58,7 +58,7 @@ function Background(p5) {
   }
 
   p5.setup = () => {
-    canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight);
+    p5.createCanvas(p5.windowWidth, p5.windowHeight);
     p5.randomSeed(rSeed);
     // cols = colors[p5.floor(p5.random(colors.length))];
     //p5.background(0);
