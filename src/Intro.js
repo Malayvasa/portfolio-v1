@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Socials from "./Socials";
-import profile from "./assets/img/profile.png";
+//import profile from "./assets/img/profile.png";
 
 function Intro({ handlePaletteChange }) {
   return (
