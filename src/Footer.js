@@ -1,14 +1,10 @@
 function Footer({ handlePaletteChange }) {
   return (
     <>
-      <div className="flex bg-slate-900 bg-opacity-60 backdrop-filter backdrop-blur-3xl md:bg-transparent items-center justify-between px-4 md:px-32 bottom-0 w-full">
-        <div className=" w-max bottom-0 text-sm  md:text-md text-white p-2 rounded-md text-opacity-40">
-          Made with React, p5js & Tailwind
-        </div>
-
+      <div className="flex items-center w-max">
         <div
           onClick={handlePaletteChange}
-          className="text-white text-opacity-40 cursor-pointer flex-shrink-0  transition ease-in-out flex flex-row items-center gap-x-2 rounded-md bg-opacity-20 hover:bg-opacity-50 text-sm bottom-0 right-0 m-4 md:m-4 bg-slate-800 p-2"
+          className="text-white flex flex-row items-center space-x-2 cursor-pointer"
         >
           <svg
             width="16"
@@ -24,7 +20,11 @@ function Footer({ handlePaletteChange }) {
               clip-rule="evenodd"
             ></path>
           </svg>
-          <div className="hidden md:block text-md">randomize</div>
+          <div className="text-sm md:text-md">randomize</div>
+        </div>
+
+        <div className="flex-shrink-0 w-max bottom-0 text-sm  md:text-md text-white p-2 rounded-md text-opacity-40">
+          Made with React, p5js & Tailwind
         </div>
       </div>
     </>

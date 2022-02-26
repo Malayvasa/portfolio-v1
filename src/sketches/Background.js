@@ -64,7 +64,7 @@ function Background(p5) {
     p5.randomSeed(rSeed);
     // cols = colors[p5.floor(p5.random(colors.length))];
     //p5.background(0);
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 20; i++) {
       agents[i] = new Agent(
         p5.random(p5.width),
         p5.random(p5.height),
@@ -89,7 +89,7 @@ function Background(p5) {
   };
 
   p5.draw = () => {
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 20; i++) {
       agents[i].display();
       agents[i].update();
     }
