@@ -79,12 +79,12 @@ function Background(p5) {
     }
   };
 
-  window.onresize = function () {
-    // assigns new values for width and height variables
-    let w = window.innerWidth;
-    let h = window.innerHeight;
-    canvas.size(w, h);
-  };
+  // window.onresize = function () {
+  //   // assigns new values for width and height variables
+  //   let w = window.innerWidth;
+  //   let h = window.innerHeight;
+  //   canvas.size(w, h);
+  // };
 
   p5.draw = () => {
     for (let i = 0; i < 20; i++) {
