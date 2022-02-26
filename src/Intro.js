@@ -4,7 +4,7 @@ import Socials from "./Socials";
 
 function Intro({ handlePaletteChange }) {
   return (
-    <div className="flex flex-col md:fixed gap-y-2 sm:gap-y-8 mt-8 sm:mt-0 sm:max-w-[300px] md:max-w-[450px]">
+    <div className="flex flex-col md:fixed gap-y-2 sm:gap-y-8 mt-8 sm:mt-0 sm:max-w-[300px] md:max-w-[400px]">
       <div className="flex-none text-3xl md:text-4xl  text-white text-opacity-60">
         <span className="text-white font-medium text-opacity-100">
           Malay Vasa
