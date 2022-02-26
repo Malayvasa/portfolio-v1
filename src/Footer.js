@@ -4,9 +4,10 @@ function Footer({ handlePaletteChange }) {
       <div className="flex items-center w-max">
         <div
           onClick={handlePaletteChange}
-          className="text-white flex flex-row items-center space-x-2 cursor-pointer"
+          className="text-white  flex flex-row items-center space-x-2 cursor-pointer"
         >
           <svg
+            className="animate-spin"
             width="16"
             height="16"
             viewBox="0 0 15 15"

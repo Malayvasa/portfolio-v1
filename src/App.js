@@ -24,7 +24,7 @@ function App() {
       </div>
 
       <div className="h-full  my-auto flex flex-col">
-        <div className=" md:h-5/6 flex flex-col sm:flex-row pb-8 sm:pb-0 md:gap-x-8 w-full px-8 lg:px-16 xl:px-16 2xl:px-44 my-auto scroll-overflow">
+        <div className=" md:h-5/6 flex flex-col md:flex-row pb-8 sm:pb-0 md:gap-x-8 w-full px-8 lg:px-16 xl:px-8 2xl:px-44 my-auto scroll-overflow">
           <div className="">
             <Intro handlePaletteChange={handlePaletteChange} />
           </div>
