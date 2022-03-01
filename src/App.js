@@ -67,6 +67,9 @@ function App() {
 
           <div className="w-full sm:w-[550px] xl:w-[750px] ml-auto mr-0 ">
             <div className="flex flex-col pt-16 md:pt-0 items-start">
+              <div className="text-2xl pb-4 text-white text-opacity-80">
+                Featured Projects
+              </div>
               <div className="text-lg pb-4 text-white text-opacity-40">
                 UI/UX Projects
               </div>
