@@ -31,8 +31,8 @@ function App() {
           cols={cols}
           minSize={250}
           maxSize={750}
-          minSpeed={1}
-          maxSpeed={4}
+          minSpeed={5}
+          maxSpeed={10}
           maxAgents={20}
         />
       </div>
