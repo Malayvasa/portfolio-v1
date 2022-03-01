@@ -1,6 +1,9 @@
 function Background(p5) {
   let noiseScale = 2000;
   let agents = [];
+  let maxAgents;
+  let minSize, maxSize;
+  let maxSpeed, minSpeed;
   let rSeed;
   //let canvas;
   let cols = [
@@ -21,8 +24,8 @@ function Background(p5) {
       this.x = x;
       this.y = y;
       this.z = p5.random(0.02, 0.08);
-      this.size = p5.random(250, 500);
-      this.speed = p5.random(0.5, 10);
+      this.size = p5.random(minSize, maxSize);
+      this.speed = p5.random(minSpeed, maxSpeed);
       this.col = p5.color(cols[index]);
       this.angle = 0;
       this.noiseStrength = (index + 1) * p5.random(10) + 20;
@@ -40,13 +43,13 @@ function Background(p5) {
         this.noiseStrength;
 
       this.x += p5.sin(this.angle) * this.speed;
-      this.y += p5.cos(this.angle) * p5.cos(this.angle / 4) * this.speed;
+      this.y += p5.cos(this.angle) * this.speed;
 
       this.bounds();
-      // this.z += 0.0005;
-      // if (this.z > 0.6) {
-      //   p5.setup();
-      // }
+      this.z += 0.0005;
+      if (this.z > 0.4 && maxAgents > 80) {
+        p5.setup();
+      }
     }
 
     bounds() {
@@ -62,12 +65,16 @@ function Background(p5) {
     p5.randomSeed(rSeed);
     // cols = colors[p5.floor(p5.random(colors.length))];
     //p5.background(0);
-    for (let i = 0; i < 20; i++) {
-      agents[i] = new Agent(
-        p5.random(p5.width),
-        p5.random(p5.height),
-        i % cols.length
-      );
+    for (let i = 0; i < maxAgents; i++) {
+      if (maxAgents > 90) {
+        agents[i] = new Agent(p5.random(p5.width), 0, i % cols.length);
+      } else {
+        agents[i] = new Agent(
+          p5.random(p5.width),
+          p5.random(p5.height),
+          i % cols.length
+        );
+      }
     }
   };
 
@@ -75,6 +82,26 @@ function Background(p5) {
     if (props.cols) {
       console.log("Inside Sketch Change");
       cols = props.cols;
+      p5.setup();
+    }
+    if (props.minSize) {
+      minSize = props.minSize;
+      p5.setup();
+    }
+    if (props.maxSize) {
+      minSize = props.maxSize;
+      p5.setup();
+    }
+    if (props.maxAgents) {
+      maxAgents = props.maxAgents;
+      p5.setup();
+    }
+    if (props.maxSpeed) {
+      maxSpeed = props.maxSpeed;
+      p5.setup();
+    }
+    if (props.minSpeed) {
+      minSpeed = props.minSpeed;
       p5.setup();
     }
   };
@@ -87,7 +114,7 @@ function Background(p5) {
   // };
 
   p5.draw = () => {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < maxAgents; i++) {
       agents[i].display();
       agents[i].update();
     }

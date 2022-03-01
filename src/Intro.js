@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import Socials from "./Socials";
 //import profile from "./assets/img/profile.png";
 
-function Intro({ handlePaletteChange }) {
+function Intro({ handlePaletteChange, handlePlayHover }) {
   return (
     <div className="flex flex-col md:fixed gap-y-2 sm:gap-y-8 mt-8 sm:mt-0 flex-1 sm:max-w-[300px] md:max-w-[450px]">
       <div className="flex-none text-3xl md:text-4xl  text-white text-opacity-60">
@@ -37,6 +37,21 @@ function Intro({ handlePaletteChange }) {
             <a href="https://www.behance.net/malayvasa">Behance</a>
           </span>{" "}
           page to see samples of my work.
+        </div>
+      </div>
+      <div className="hidden sm:block mt-4 mb-12 sm:space-y-8 flex-col align-middle">
+        <div className="py-4 hover:border-l-8 bg-slate-50 hover:backdrop-blur-sm bg-opacity-0 hover:bg-opacity-20 hover:shadow-xl transition-all ease-in-out text-xl pl-4 text-white border-l-2">
+          Work
+        </div>
+        <div
+          className="py-4 hover:border-l-8 bg-slate-50 hover:backdrop-blur-sm bg-opacity-0 hover:bg-opacity-20 hover:shadow-xl transition-all ease-in-out text-xl pl-4 text-white border-l-2"
+          onMouseEnter={handlePlayHover}
+          onMouseLeave={handlePlayHover}
+        >
+          Play
+        </div>
+        <div className="py-4 hover:border-l-8 bg-slate-50 hover:backdrop-blur-sm bg-opacity-0 hover:bg-opacity-20 hover:shadow-xl transition-all ease-in-out text-xl pl-4 text-white border-l-2">
+          About
         </div>
       </div>
       <div className="flex-none flex flex-row items-center ">

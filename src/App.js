@@ -2,6 +2,7 @@ import { ReactP5Wrapper } from "react-p5-wrapper";
 import colors from "nice-color-palettes/100";
 import { useState } from "react";
 import Background from "./sketches/Background";
+import "./index.css";
 
 //import Card from "./Card";
 
@@ -9,7 +10,13 @@ import Intro from "./Intro";
 import ProjectCard from "./ProjectCard";
 
 function App() {
+  const [playHover, setPlayHover] = useState(false);
   const [cols, setCols] = useState(colors[52]);
+
+  function handlePlayHover() {
+    setPlayHover(!playHover);
+  }
+
   function handlePaletteChange() {
     let newPaletteNum = Math.floor(Math.random() * colors.length);
     let newCols = colors[newPaletteNum];
@@ -17,16 +24,45 @@ function App() {
     console.log("handlePaletteChange");
   }
   return (
-    <div className="h-screen mb-8">
-      {/* <div className="fixed top-0 left-0 h-screen w-screen bg-opacity-40  bg-slate-900  saturate-200 -z-10"></div> */}
-      <div className="fixed top-0 left-0 opacity-80 blur-3xl  saturate-200 -z-20">
-        <ReactP5Wrapper sketch={Background} cols={cols} />
+    <div className="h-screen z-10">
+      <div className="fixed top-0 left-0 blur-3xl opacity-80 saturate-200 -z-20">
+        <ReactP5Wrapper
+          sketch={Background}
+          cols={cols}
+          minSize={250}
+          maxSize={750}
+          minSpeed={1}
+          maxSpeed={4}
+          maxAgents={20}
+        />
       </div>
+      {
+        <div
+          className={
+            playHover
+              ? "fadeIn fixed top-0 left-0 opacity-50 saturate-200 -z-20"
+              : "fadeOut fixed top-0 left-0 opacity-50 saturate-200 -z-20"
+          }
+        >
+          <ReactP5Wrapper
+            sketch={Background}
+            cols={cols}
+            minSize={5}
+            maxSize={18}
+            minSpeed={1}
+            maxSpeed={5}
+            maxAgents={50}
+          />
+        </div>
+      }
 
       <div className="h-full  my-auto flex flex-col">
         <div className=" md:h-5/6 flex flex-col md:flex-row pb-32 sm:pb-8 md:gap-x-8 w-full px-8 lg:px-16 xl:px-16 2xl:px-44 my-auto scroll-overflow">
           <div className="">
-            <Intro handlePaletteChange={handlePaletteChange} />
+            <Intro
+              handlePaletteChange={handlePaletteChange}
+              handlePlayHover={handlePlayHover}
+            />
           </div>
 
           <div className="w-full sm:w-[550px] xl:w-[750px] ml-auto mr-0 ">
