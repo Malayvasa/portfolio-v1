@@ -31,6 +31,15 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
         <span className="text-opacity-100 text-white underline">
           <a href="https://kernel.community/en/">Kernel</a>
         </span>
+        <div className="my-4">
+          Currently looking for Remote Summer 2022 Internship Opportunities.
+          Here's my{" "}
+          <span className="text-white text-opacity-100 underline">
+            <a href="./assets/MalayVasa-Resume-2022.pdf" download>
+              resume.
+            </a>
+          </span>
+        </div>
         {/* <div className="my-4">
           This portfolio is still under construction, please visit my{" "}
           <span className="text-white underline">
@@ -60,7 +69,10 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
         </div>
       </div>
       <div className="flex-none">
-        <Footer handlePaletteChange={handlePaletteChange} />
+        <Footer
+          handlePaletteChange={handlePaletteChange}
+          handlePlayHover={handlePlayHover}
+        />
       </div>
     </div>
   );

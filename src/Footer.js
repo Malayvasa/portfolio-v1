@@ -1,9 +1,11 @@
-function Footer({ handlePaletteChange }) {
+function Footer({ handlePaletteChange, handlePlayHover }) {
   return (
     <>
-      <div className="flex items-center w-max">
+      <div className="hidden sm:flex items-center w-max">
         <div
           onClick={handlePaletteChange}
+          onMouseEnter={handlePlayHover}
+          onMouseLeave={handlePlayHover}
           className="text-white  flex flex-row items-center space-x-2 cursor-pointer"
         >
           <svg
