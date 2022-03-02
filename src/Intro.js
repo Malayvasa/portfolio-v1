@@ -31,15 +31,15 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
         <span className="text-opacity-100 text-white underline">
           <a href="https://kernel.community/en/">Kernel</a>
         </span>
-        <div className="my-4">
+        {/* <div className="my-4">
           This portfolio is still under construction, please visit my{" "}
           <span className="text-white underline">
             <a href="https://www.behance.net/malayvasa">Behance</a>
           </span>{" "}
           page to see samples of my work.
-        </div>
+        </div> */}
       </div>
-      <div className="hidden sm:block mt-4 mb-12 sm:space-y-8 flex-col align-middle">
+      {/* <div className="hidden sm:block mt-4 mb-12 sm:space-y-8 flex-col align-middle">
         <div className="py-4 hover:border-l-8 bg-slate-50 hover:backdrop-blur-sm bg-opacity-0 hover:bg-opacity-20 hover:shadow-xl transition-all ease-in-out text-xl pl-4 text-white border-l-2">
           Work
         </div>
@@ -53,7 +53,7 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
         <div className="py-4 hover:border-l-8 bg-slate-50 hover:backdrop-blur-sm bg-opacity-0 hover:bg-opacity-20 hover:shadow-xl transition-all ease-in-out text-xl pl-4 text-white border-l-2">
           About
         </div>
-      </div>
+      </div> */}
       <div className="flex-none flex flex-row items-center ">
         <div className="flex flex-row gap-x-6 mt-8 md:mt-0">
           <Socials />

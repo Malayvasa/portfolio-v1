@@ -88,28 +88,6 @@ function App() {
 
             <div className="flex flex-col pt-16 items-start">
               <div className="text-lg pb-4 text-white text-opacity-40">
-                Landing Pages
-              </div>
-              <div className="flex flex-col md:flex-row items-start md:items-end h-max gap-y-6 gap-4">
-                <ProjectCard
-                  Title={"Modfy"}
-                  Description={
-                    "Modfy is an early stage startup building the future of video editing backed by Pioneer & OnDeck(ODX)."
-                  }
-                  url={"https://modfy.video"}
-                />
-                <ProjectCard
-                  Title={"Coinocracy"}
-                  Description={
-                    "Coinocracy aims to provide the ultimate DAO-VC toolkit to begin to bridge the venture capital and DAO worlds."
-                  }
-                  url={"https://coinocracy.finance"}
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col pt-16 items-start">
-              <div className="text-lg pb-4 text-white text-opacity-40">
                 Creative Coding Projects
               </div>
               <div className="flex flex-col md:flex-row items-start h-full gap-y-6 gap-4">
@@ -128,6 +106,28 @@ function App() {
                     "A dataviz experience that introduces gender fluidity through music genres."
                   }
                   url={"https://www.genregender.com/"}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col pt-16 items-start">
+              <div className="text-lg pb-4 text-white text-opacity-40">
+                Landing Pages
+              </div>
+              <div className="flex flex-col md:flex-row items-start md:items-end h-max gap-y-6 gap-4">
+                <ProjectCard
+                  Title={"Modfy"}
+                  Description={
+                    "Modfy is an early stage startup building the future of video editing backed by Pioneer & OnDeck(ODX)."
+                  }
+                  url={"https://modfy.video"}
+                />
+                <ProjectCard
+                  Title={"Coinocracy"}
+                  Description={
+                    "Coinocracy aims to provide the ultimate DAO-VC toolkit to begin to bridge the venture capital and DAO worlds."
+                  }
+                  url={"https://coinocracy.finance"}
                 />
               </div>
             </div>
