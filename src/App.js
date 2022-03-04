@@ -6,12 +6,12 @@ import "./index.css";
 
 //import Card from "./Card";
 
-import Intro from "./Intro";
-import ProjectCard from "./ProjectCard";
+import Intro from "./components/Intro";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const [playHover, setPlayHover] = useState(false);
-  const [cols, setCols] = useState(colors[52]);
+  const [cols, setCols] = useState(colors[40]);
 
   function handlePlayHover() {
     setPlayHover(!playHover);
@@ -29,10 +29,10 @@ function App() {
         <ReactP5Wrapper
           sketch={Background}
           cols={cols}
-          minSize={250}
+          minSize={500}
           maxSize={750}
-          minSpeed={5}
-          maxSpeed={10}
+          minSpeed={1}
+          maxSpeed={5}
           maxAgents={20}
         />
       </div>
