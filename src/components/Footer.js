@@ -1,7 +1,7 @@
 function Footer({ handlePaletteChange, handlePlayHover }) {
   return (
     <>
-      <div className="hidden sm:flex items-center w-max">
+      <div className="hidden sm:flex items-center">
         <div
           onClick={handlePaletteChange}
           onMouseEnter={handlePlayHover}
