@@ -30,17 +30,7 @@ function E404() {
             maxAgents={40}
           />
         </div>
-        <div className="hidden fixed top-0 left-0 opacity-20 saturate-200 -z-20">
-          <ReactP5Wrapper
-            sketch={Background}
-            cols={cols}
-            minSize={5}
-            maxSize={18}
-            minSpeed={1}
-            maxSpeed={5}
-            maxAgents={50}
-          />
-        </div>
+
         <div className="flex gap-y-4 flex-col w-full items-center my-auto content-center">
           <div className="text-bold text-white sm:text-9xl text-6xl text-center align-middle">
             Uh Oh!
@@ -52,7 +42,7 @@ function E404() {
               Home
             </Link>
           </div>
-          <div className="flex flex-row gap-x-6 mt-8 md:mt-0">
+          <div className="flex flex-row gap-x-6 mt-8">
             <Socials />
           </div>
 
