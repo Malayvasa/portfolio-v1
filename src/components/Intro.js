@@ -35,7 +35,10 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
           Currently looking for Remote Summer 2022 Internship Opportunities.
           Here's my{" "}
           <span className="text-white text-opacity-100 underline">
-            <a href="./assets/MalayVasa-Resume-2022.pdf" download>
+            <a
+              href={require("../assets/MalayVasa-Resume-2022.pdf")}
+              download="Malay-Vasa-Resume.pdf"
+            >
               resume.
             </a>
           </span>
