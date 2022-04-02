@@ -1,5 +1,5 @@
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import colors from "nice-color-palettes/100";
+import colors from "nice-color-palettes/500";
 import { useState } from "react";
 import Background from "../sketches/Background";
 
@@ -12,7 +12,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function Home() {
   const [playHover, setPlayHover] = useState(false);
-  const [cols, setCols] = useState(colors[40]);
+  const [cols, setCols] = useState(colors[140]);
 
   function handlePlayHover() {
     setPlayHover(!playHover);
