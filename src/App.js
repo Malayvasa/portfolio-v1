@@ -1,5 +1,5 @@
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import colors from "nice-color-palettes/100";
+import colors from "nice-color-palettes/500";
 import { useState } from "react";
 import Background from "./sketches/Background";
 import "./index.css";
@@ -11,7 +11,7 @@ import ProjectCard from "./components/ProjectCard";
 
 function App() {
   const [playHover, setPlayHover] = useState(false);
-  const [cols, setCols] = useState(colors[40]);
+  const [cols, setCols] = useState(colors[329]);
 
   function handlePlayHover() {
     setPlayHover(!playHover);
@@ -21,7 +21,7 @@ function App() {
     let newPaletteNum = Math.floor(Math.random() * colors.length);
     let newCols = colors[newPaletteNum];
     setCols(newCols);
-    console.log("handlePaletteChange");
+    console.log(newPaletteNum);
   }
   return (
     <div className="h-screen z-10">
@@ -31,9 +31,9 @@ function App() {
           cols={cols}
           minSize={500}
           maxSize={750}
-          minSpeed={1}
-          maxSpeed={5}
-          maxAgents={20}
+          minSpeed={0.7}
+          maxSpeed={1.5}
+          maxAgents={49}
         />
       </div>
       {
@@ -110,7 +110,7 @@ function App() {
               </div>
             </div>
 
-            <div className="flex flex-col pt-16 items-start">
+            <div className="flex flex-col py-16 items-start">
               <div className="text-lg pb-4 text-white text-opacity-40">
                 Landing Pages
               </div>

@@ -19,20 +19,13 @@ function Intro({ handlePaletteChange, handlePlayHover }) {
         <span className="text-opacity-100 text-white underline">
           <a href="http://srishtimanipalinstitute.in/">SMI,</a>
         </span>{" "}
-        Bengaluru. I'm currently working as a Product Designer at{" "}
+        Bengaluru. I'm currently working as a UI/UX Design Intern at{" "}
         <span className="text-opacity-100 text-white underline">
-          <a href="https://www.modfy.video/">Modfy</a>
-        </span>{" "}
-        and as a Freelance Designer + Developer at{" "}
-        <span className="text-opacity-100 text-white underline">
-          <a href="https://www.coinocracy.finance/">Coinocracy</a>
-        </span>{" "}
-        &{" "}
-        <span className="text-opacity-100 text-white underline">
-          <a href="https://kernel.community/en/">Kernel</a>
-        </span>
+          <a href="https://polygon.technology/">Polygon</a>
+        </span>{". "}
+       
         <div className="my-4">
-          Currently looking for Remote Summer 2022 Internship Opportunities.
+          Always open for interesting projects. <br/>
           Here's my{" "}
           <span className="text-white text-opacity-100 underline">
             <a

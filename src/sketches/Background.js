@@ -47,7 +47,7 @@ function Background(p5) {
 
       this.bounds();
       this.z += 0.0005;
-      if (this.z > 0.4 && maxAgents > 40) {
+      if (this.z > 0.4 && maxAgents >= 50) {
         p5.setup();
       }
     }
