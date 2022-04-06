@@ -114,6 +114,7 @@ function Background(p5) {
   // };
 
   p5.draw = () => {
+    p5.background(0,40);
     for (let i = 0; i < maxAgents; i++) {
       agents[i].display();
       agents[i].update();

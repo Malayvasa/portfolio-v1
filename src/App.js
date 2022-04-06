@@ -47,11 +47,11 @@ function App() {
           <ReactP5Wrapper
             sketch={Background}
             cols={cols}
-            minSize={5}
-            maxSize={18}
+            minSize={15}
+            maxSize={48}
             minSpeed={1}
             maxSpeed={5}
-            maxAgents={50}
+            maxAgents={90}
           />
         </div>
       }
